@@ -55,6 +55,13 @@ open Kahvia.app
 3. The icon changes per state.
 4. Quit app while caffeinate is running — the process stops cleanly (via `-w <pid>`).
 
+## Install to Applications
+
+Drag `Kahvia.app` onto `/Applications` (or your `~/Applications` folder) in
+Finder, same as any other Mac app. Since it's ad-hoc signed rather than
+notarized, the first launch may need a right-click → Open (or an approval in
+System Settings → Privacy & Security) instead of a plain double-click.
+
 ## Design decisions
 
 - No timers, no login-at-startup, no custom assets.
