@@ -14,6 +14,10 @@ that, use the **Display** mode to keep the display itself on. The display can
 still be locked (`⌃⌘Q` / lock screen) while in this mode — locking doesn't
 put it to sleep.
 
+Closing the laptop lid always forces sleep, no matter which mode is active —
+`caffeinate` can't override that. Keep the lid open (or use an external
+display in clamshell mode) if you want the Mac to stay awake.
+
 ## States
 
 | State | Flags | Meaning |
