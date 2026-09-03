@@ -2,6 +2,18 @@
 
 A tiny macOS menu bar app to toggle `/usr/bin/caffeinate` with 3 states.
 
+## Why
+
+The point is to not have to open a terminal and run `caffeinate` every time
+you want to keep your Mac awake — just click the menu bar icon instead.
+
+Most external monitors cut power to the display cable once they go to sleep,
+and losing that signal makes a MacBook think its lid is effectively closed,
+so it switches to battery power even while plugged in. If you don't want
+that, use the **Display** mode to keep the display itself on. The display can
+still be locked (`⌃⌘Q` / lock screen) while in this mode — locking doesn't
+put it to sleep.
+
 ## States
 
 | State | Flags | Meaning |
