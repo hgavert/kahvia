@@ -58,9 +58,7 @@ open Kahvia.app
 ## Install to Applications
 
 Drag `Kahvia.app` onto `/Applications` (or your `~/Applications` folder) in
-Finder, same as any other Mac app. Since it's ad-hoc signed rather than
-notarized, the first launch may need a right-click → Open (or an approval in
-System Settings → Privacy & Security) instead of a plain double-click.
+Finder, same as any other Mac app.
 
 ## Design decisions
 
@@ -70,3 +68,15 @@ System Settings → Privacy & Security) instead of a plain double-click.
 - No attempt to prevent sleep on lid close — deliberate. People expect a
   laptop to sleep when it goes in a bag; overriding that would be surprising
   and could cook the machine.
+
+## Gatekeeper note
+
+A locally built `Kahvia.app` (via `./build.sh`) launches straight away — no
+quarantine flag is set, since nothing wrote it via a browser, Mail, or
+AirDrop. If you instead get a copy that went through one of those (e.g. a
+GitHub release zip downloaded in a browser), macOS marks it quarantined and
+the first launch needs a right-click → Open, or clearing the flag manually:
+
+```bash
+xattr -d com.apple.quarantine ~/Downloads/Kahvia.app
+```
