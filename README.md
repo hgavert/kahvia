@@ -60,3 +60,6 @@ open Kahvia.app
 - No timers, no login-at-startup, no custom assets.
 - Process auto-terminates when the app quits (`-w` flag).
 - Ad-hoc signed so Gatekeeper won't block launch.
+- No attempt to prevent sleep on lid close — deliberate. People expect a
+  laptop to sleep when it goes in a bag; overriding that would be surprising
+  and could cook the machine.
