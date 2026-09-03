@@ -2,6 +2,8 @@
 
 A tiny macOS menu bar app to toggle `/usr/bin/caffeinate` with 3 states.
 
+![Menu bar dropdown](Resources/Screenshots/menu-dropdown.png)
+
 ## Why
 
 The point is to not have to open a terminal and run `caffeinate` every time
