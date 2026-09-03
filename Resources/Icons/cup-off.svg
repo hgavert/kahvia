@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+  <!-- Mug body, seen slightly from above: top is a wider ellipse, body tapers down -->
+  <g fill="none" stroke="#000000" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+    <!-- top rim ellipse -->
+    <ellipse cx="7.3" cy="6.8" rx="4.3" ry="1.6"/>
+    <!-- body sides going down to a slightly narrower base, with bottom front curve -->
+    <path d="M3.1 6.9 L3.7 13.4 C3.9 14.5 5.5 15.3 7.3 15.3 C9.1 15.3 10.7 14.5 10.9 13.4 L11.5 6.9"/>
+    <!-- handle -->
+    <path d="M11.4 8.2 C13.6 8.2 14.6 9.6 14.4 11.2 C14.2 12.7 12.7 13.5 11.1 13.2"/>
+  </g>
+</svg>

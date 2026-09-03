@@ -1,0 +1,44 @@
+# Kahvia
+
+A tiny macOS menu bar app to toggle `/usr/bin/caffeinate` with 3 states.
+
+## States
+
+| State | Flags | Meaning |
+|-------|-------|---------|
+| Off | none | Mac may sleep |
+| On | (default) | Blocks idle sleep |
+| Display | `-d` | Blocks display sleep — stops when display goes to sleep |
+
+## Requirements
+
+- macOS 13+
+- Xcode command-line tools (`swift` available)
+
+## Build
+
+```bash
+# Build .app bundle (compile + bundle + ad-hoc sign)
+./build.sh
+
+# The script produces Kahvia.app with Info.plist (LSUIElement=true)
+```
+
+The build script runs `swift build -c release`, assembles a proper `.app` bundle structure with `Info.plist`, and ad-hoc signs.
+
+## Run
+
+```bash
+open Kahvia.app
+```
+
+1. Run `Kahvia` — an icon appears in the menu bar.
+2. Click the icon to pick a mode from the dropdown: Off, On, or Display.
+3. The icon changes per state.
+4. Quit app while caffeinate is running — the process stops cleanly (via `-w <pid>`).
+
+## Design decisions
+
+- No timers, no login-at-startup, no custom assets.
+- Process auto-terminates when the app quits (`-w` flag).
+- Ad-hoc signed so Gatekeeper won't block launch.
